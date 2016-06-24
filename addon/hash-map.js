@@ -1,5 +1,5 @@
 import EmptyObject from '../ember/empty-object';
-import { UNDEFINED_KEY } from './fast-map';
+import { UNDEFINED_KEY } from './-constants';
 
 export default class HashMap {
 
