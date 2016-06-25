@@ -1,4 +1,4 @@
-import EmptyObject from '../ember/empty-object';
+import EmptyObject from './empty-object';
 import { UNDEFINED_KEY } from './-constants';
 
 export default class HashMap {
