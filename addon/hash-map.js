@@ -16,7 +16,7 @@ export default class HashMap {
   forEach(cb) {
     for (let key in this._data) {
       // skip undefined
-      if (key !== UNDEFINED_KEY) {
+      if (this._data[key] !== UNDEFINED_KEY) {
         cb(this._data[key], key);
       }
     }
