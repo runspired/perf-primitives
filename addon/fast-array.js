@@ -38,6 +38,15 @@ export default class FastArray {
     }
   }
 
+  emptyEach(cb) {
+    for (let i = 0; i < this.length; i++) {
+      cb(this._data[i], i);
+      this._data[i] = undefined;
+    }
+
+    this.length = 0;
+  }
+
   mapInPlace(cb) {
     for (let i = 0; i < this.length; i++) {
       this._data[i] = cb(this._data[i], i);
