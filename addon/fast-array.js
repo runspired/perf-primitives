@@ -1,7 +1,6 @@
 import { SMALL_ARRAY_LENGTH } from './-constants';
 
 export default class FastArray {
-
   constructor(length = SMALL_ARRAY_LENGTH, name = 'Unknown Pool') {
     this.init(length, name);
   }
@@ -21,10 +20,38 @@ export default class FastArray {
     return undefined;
   }
 
+  set(index, value) {
+    if (index > this.length) {
+      throw new Error("Index is out of array bounds.");
+    }
+
+    if (index === this.length) {
+      this.length++;
+    }
+
+    this._data[index] = value;
+  }
+
   forEach(cb) {
     for (let i = 0; i < this.length; i++) {
       cb(this._data[i], i);
     }
+  }
+
+  mapInPlace(cb) {
+    for (let i = 0; i < this.length; i++) {
+      this._data[i] = cb(this._data[i], i);
+    }
+  }
+
+  map(cb) {
+    let arr = new FastArray(this._length, this.name);
+
+    for (let i = 0; i < this.length; i++) {
+      arr._data[i] = cb(this._data[i], i);
+    }
+
+    return arr;
   }
 
   push(item) {
