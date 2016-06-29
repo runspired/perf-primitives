@@ -1,6 +1,6 @@
 {
   "name": "perf-primitives",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Performance minded primitives for ambitious web applications.",
   "directories": {
     "doc": "doc",
