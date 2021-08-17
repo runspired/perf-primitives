@@ -2,30 +2,30 @@
   "name": "perf-primitives",
   "version": "0.0.6",
   "description": "Performance minded primitives for ambitious web applications.",
+  "author": "",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
   "scripts": {
     "build": "ember build",
-    "test": "ember test"
-  },
-  "repository": "",
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "broccoli-asset-rev": "^3.0.0",
-    "ember-cli": "2.5.1",
-    "ember-cli-dependency-checker": "^3.2.0"
+    "test": "ember try:each"
   },
   "keywords": [
     "ember-addon"
   ],
+  "repository": "",
+  "license": "MIT",
   "dependencies": {
     "ember-cli-babel": "^7.26.6"
+  },
+  "devDependencies": {
+    "broccoli-asset-rev": "^3.0.0",
+    "ember-cli": "2.10.0",
+    "ember-cli-dependency-checker": "^3.2.0"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
